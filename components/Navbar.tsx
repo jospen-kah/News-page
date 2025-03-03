@@ -23,7 +23,7 @@ export default function NavigationBar() {
   }
 
   return (
-    <nav className="relative  shadow-sm py-5 px-60 ">
+    <nav className=" py-5 px-60 ">
       <div className="container mx-auto  py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
@@ -36,7 +36,7 @@ export default function NavigationBar() {
             <Link 
               key={link.href} 
               href={link.href} 
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors hover:text-red-400"
             >
               {link.label}
             </Link>
