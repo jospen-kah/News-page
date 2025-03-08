@@ -56,21 +56,22 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="h-full flex-col flex gap-4 px-60 py-2">
-        <div className="w-full flex flex-row gap-10">
+
+      <div className="   flex-col px:1 md:gap-4 md:px-60 py-2">
+        <div className=" px-2 flex flex-col md:flex-row gap-10">
           {/* Web3.0 Section */}
-          <div className="w-2/3 flex-1 gap-1 flex-col">
-            <div className="bg-blue-500 h-60">
+          <div className=" w-full  flex flex-col md:px-0 md:w-2/3 md:flex-1 gap-1 ">
+            <div className=" h-60 w-full">
               <Image
                 src="/image-web-3-desktop.jpg"
                 alt="desktop"
                 width={400}
                 height={4}
-                className="w-full h-full"
+                className="px-2 md:px-0 w-full h-full"
               />
             </div>
-            <div className="flex items-center justify-evenly p-2">
-              <div className="flex-1 text-6xl font-semibold">
+            <div className=" flex flex-col md:flex-row md:items-center justify-evenly p-2">
+              <div className="flex flex-col md:flex-1 text-6xl font-semibold">
                 The Bright <br /> future of<br /> Web3.0
               </div>
               <div className="flex flex-1 flex-col gap-3 justify-between px-1">
@@ -96,7 +97,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" flex flex-col gap-1 bg-black text-white w-1/3 p-4 justify-between ">
+          <div className=" w-full px-2 rounded-sm flex flex-col gap-1  bg-black text-white md:w-1/3 md:p-4 justify-between ">
             <h1 className="text-yellow-600 font-bold text-5xl py-2">New</h1>
             <div className="flex flex-col justify-evenly  flex-1">
               {datalist.map((item, index) => (
@@ -112,16 +113,16 @@ export default function Home() {
         </div>
 
         {/* Card List Section */}
-        <div className="py-10 w-full grid grid-cols-3 gap-1">
+        <div className="px-2 py-10 w-full md:px-0 grid grid-col-1 md:grid-cols-3 gap-2">
           {data.map((item) => (
-            <div className="flex flex-row gap-2 justify-even" key={item.id}>
+            <div className=" flex flex-row gap-2 justify-even" key={item.id}>
               <div className="w-1/3">
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={400}
                   height={4}
-                  className="h-full w-full"
+                  className="h-full w-full "
                 />
               </div>
               <div className="flex flex-col gap-2 px-2 justify-between">

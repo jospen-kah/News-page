@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
-// import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 
 export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,7 +23,7 @@ export default function NavigationBar() {
   }
 
   return (
-    <nav className=" py-5 px-60 ">
+    <nav className=" px-1 md:px-60 flex flex-row justify-between md:py-5 ">
       <div className="container mx-auto  py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
@@ -45,14 +45,14 @@ export default function NavigationBar() {
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
-          {/* <Button 
+          <Button 
             variant="ghost" 
             size="icon" 
             onClick={toggleMenu}
             aria-label="Toggle Menu"
-          > */}
+          >
             {isMenuOpen ? <X /> : <Menu />}
-          {/* </Button> */}
+          </Button>
         </div>
       </div>
 
